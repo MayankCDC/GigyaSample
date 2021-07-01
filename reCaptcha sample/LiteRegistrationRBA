@@ -1,0 +1,34 @@
+{
+   "commonRules":[
+      {
+         "scope":"LiteRegistration",
+         "action":{
+            "scope":[
+               "account"
+            ],
+            "type":"captcha"
+         },
+         "rootFactor":{
+            "type":"highRisk",
+            "scope":[
+               "account"
+            ],
+            "threshold":0.0002
+         },
+         "description":"On high risk score > Force CAPTCHA on account",
+         "enabled":true
+      }
+   ],
+   "rulesSets":[
+      {
+         "id":"_off",
+         "description":"This policy represents a policy without any validations",
+         "enabled":true,
+         "rules":[
+            
+         ]
+      }
+   ],
+   "defaultPolicy":"_off",
+   "allowOverrideMode":"no"
+}
