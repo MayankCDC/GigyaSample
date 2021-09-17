@@ -21,9 +21,9 @@ app.post('/', function(req, res) {
   //  console.log((decoded)); to see request body
      
    if (decoded.extensionPoint.toString() == "OnBeforeAccountsRegister") {
-       console.log("here");
+       console.log("extension triggered");
         if (!decoded.data.params.email.toString().endsWith('@xyz.com')){
-            console.log("here2");
+            console.log("test 1 success");
             ret.status = "FAIL";
             var customMessage = "Email should belong to domain 'xyz.com'";
             if (decoded.data.params.lang === "he")
